@@ -35,10 +35,10 @@ Works:
 
 ```bash
 git clone https://github.com/realme-pineapple-devs/recovery_device_realme_pineapple.git device/realme/pineapple
+bash device/realme/pineapple/patches/apply-patches.sh .
 . build/envsetup.sh
 lunch twrp_pineapple-ap2a-eng
 make installclean
-cp device/realme/pineapple/prebuilt/kernel out/target/product/pineapple/
 mka adbd recoveryimage
 ```
 
