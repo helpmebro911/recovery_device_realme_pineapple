@@ -27,17 +27,14 @@ Works:
 - [X] Flashlight
 - [X] Vibrator/Haptic
 - [X] OTA/Payload
-- [ ] User data decryption on RUI(We can only decrypt “/data”)
-- [ ] Unable to successfully unmap super devices(If try to fix this, it causes an OrangeFox bug with hw control, which prevents recovery from loading until OFOX settings are cleared)
-- [ ] Сannot format DATA (this is prevented by the inability to unmap super devices + in any case, you cannot format DATA on RUI until user data is decrypted)
+- [X] User data decryption
 
 # Building
 
 ```bash
 git clone https://github.com/realme-pineapple-devs/recovery_device_realme_pineapple.git device/realme/pineapple
-bash device/realme/pineapple/patches/apply-patches.sh .
 . build/envsetup.sh
-lunch twrp_pineapple-ap2a-eng
+breakfast twrp_pineapple-ap2a-eng
 make installclean
 mka adbd recoveryimage
 ```

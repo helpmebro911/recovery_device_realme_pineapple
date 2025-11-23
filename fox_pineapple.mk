@@ -1,6 +1,6 @@
 #
 #	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2024 The OrangeFox Recovery Project
+# 	Copyright (C) 2025 The OrangeFox Recovery Project
 #
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
@@ -23,6 +23,7 @@ OF_AB_DEVICE_WITH_RECOVERY_PARTITION=1
 OF_ALLOW_DISABLE_NAVBAR=0
 OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
 OF_DONT_KEEP_LOG_HISTORY := 1
+OF_USE_AIDL_BOOT_CONTROL=1
 
 # OrangeFox GUI settings
 OF_SCREEN_H=2376
@@ -32,10 +33,8 @@ OF_STATUS_INDENT_LEFT=48
 OF_STATUS_INDENT_RIGHT=48
 
 # Recovery additional features
-OF_ENABLE_LPTOOLS=1
-
-OF_DISABLE_OTA_MENU := 1
-OF_DYNAMIC_FULL_SIZE := 9663676416
+OF_ENABLE_ALL_PARTITION_TOOLS=1
+OF_USE_DMCTL=1
 
 # Maintainer specific settings
 OF_MAINTAINER := MisterZtr

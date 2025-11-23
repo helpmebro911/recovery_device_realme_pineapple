@@ -11,14 +11,7 @@ ALLOW_MISSING_DEPENDENCIES := true
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := kryo
-
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := $(TARGET_ARCH_VARIANT)
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := $(TARGET_CPU_VARIANT)
 
 # Power
 ENABLE_CPUSETS := true
@@ -141,9 +134,9 @@ TW_INCLUDE_FUSE_NTFS := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 4095
-TW_DEFAULT_BRIGHTNESS := 2048
+TW_DEFAULT_BRIGHTNESS := 1500
 TW_EXTRA_LANGUAGES := true
-TW_DEFAULT_LANGUAGE := en_US
+TW_DEFAULT_LANGUAGE := en
 TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS := "50"
 TW_CUSTOM_CLOCK_POS := "600"
@@ -154,9 +147,7 @@ TW_EXCLUDE_APEX := true
 TW_HAS_EDL_MODE := true
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 TW_NO_SCREEN_BLANK := true
-TW_OVERRIDE_SYSTEM_PROPS := \
-    "ro.build.fingerprint=ro.vendor.build.fingerprint;ro.build.version.incremental"
-TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko goodix_core.ko"
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko goodix_core.ko stm_st54se_gpio.ko nxp-nci.ko"
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 TW_LOAD_VENDOR_BOOT_MODULES := true
 TW_LOAD_PREBUILT_MODULES := true
